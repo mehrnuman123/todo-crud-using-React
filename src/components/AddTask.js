@@ -38,14 +38,14 @@ const AddTask = ({ onSave }) => {
         <form className="add-form" onSubmit={onSubmit}>
             <div className="form-control">
                 <label>Task</label>
-                <input type="text" placeholder="add task" value={text} onChange={(e) => setText(e.target.value)} />
+                <input data-testId="textInput" type="text" placeholder="add task" value={text} onChange={(e) => setText(e.target.value)} />
             </div>
             <div className="form-control">
                 <label>Day & Time</label>
-                <input type="date" placeholder="add day & time" value={day} onChange={(e) => setDay(e.target.value)} />
+                <input data-testId="dateInput" type="date" placeholder="add day & time" value={day} onChange={(e) => setDay(e.target.value)} />
             </div>
 
-            <input type="submit" className="btn btn-block" value="Save Task" />
+            <input data-testId="submitBtn" type="submit" className="btn btn-block" value="Save Task" />
         </form>
     )
 }
